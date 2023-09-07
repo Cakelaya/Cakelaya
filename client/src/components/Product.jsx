@@ -39,6 +39,10 @@ const Container = styled.div`
   &:hover ${Info} {
     opacity: 1;
   }
+  gap: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   blink {
     background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);   -webkit-background-clip: text;
     color: transparent;
@@ -98,13 +102,16 @@ const Icon = styled.div`
 const Price = styled.div`
   margin-top: 10px;
   text-align: center;
+  font-size: 16px;
+  font-weight: 600;
   /* margin-left: 50px; */
 `;
 
 const Name = styled.div`
   margin-top: 10px;
   text-align: center;
-  font-size: 15px;
+  font-size: 20px;
+  font-weight: 800;
 `;
 
 const Product = ({ item, cat, filters }) => {

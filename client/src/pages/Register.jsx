@@ -117,7 +117,7 @@ const Register = () => {
     e.preventDefault();
     username = username.replace(/\s+/g, " ").trim();
     var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-    
+
     if (email.match(mailformat)) {
       register(dispatch, {
         username,
@@ -137,22 +137,22 @@ const Register = () => {
         <Form>
           <Input
             type={"name"}
-            placeholder="username"
+            placeholder="USERNAME"
             onChange={(e) => handleChangeUser(e)}
           />
           <Input
             type={"email"}
-            placeholder="email"
+            placeholder="EMAIL ID"
             onChange={(e) => handleChangeEmail(e)}
           />
           <Input
             type={"password"}
-            placeholder="password"
+            placeholder="PASSWORD"
             onChange={(e) => handleChangePass(e)}
           />
           <Input
             type={"password"}
-            placeholder="confirm password"
+            placeholder="CONFIRM PASSWORD"
             onChange={(e) => handleChangeConfirmPass(e)}
           />
           <Agreement>
