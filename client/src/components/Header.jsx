@@ -11,16 +11,14 @@ import {
 import { Badge } from "@material-ui/core";
 import { ShoppingCartOutlined } from "@material-ui/icons";
 import React, { useState } from "react";
-import { mobile } from "../responsive";
 import { useSelector, useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useHistory, useLocation } from "react-router-dom";
 import { logOut } from "../redux/userRedux";
 import { placeCity } from "../redux/cityRedux";
 import { useEffect } from "react";
 import { Icon } from '@iconify/react';
 import { useRef } from "react";
 import { removeProduct } from "../redux/cartRedux";
-import { useLocation } from "react-router-dom";
 
 const Filter = styled.div`
   margin: 20px;
@@ -134,12 +132,19 @@ export default function Header() {
   const user = useSelector((state) => state.user.currentUser);
   const [state, setState] = useState(city);
   const [icon, setIcon] = useState(true);
+  const [navStatus, setNavStatus] = useState("navbar-container");
   const location = useLocation();
+  const history = useHistory();
 
   const handleNav = () => {
-    const nav = document.querySelector(".navbar-container");
-    nav.classList.toggle("active");
-    nav.classList.contains("active") ? setIcon(false) : setIcon(true);
+    if (navStatus === "navbar-container") {
+      setNavStatus('active');
+      setIcon(true);
+    }
+    else {
+      setNavStatus('navbar-container');
+      setIcon(false);
+    }
   };
 
   // display dropdown menu for feature/company icon
@@ -186,9 +191,10 @@ export default function Header() {
 
   const handleClickOutside = (e) => {
     if (!refOne?.current?.contains(e.target)) {
-      const nav = document.querySelector(".navbar-container");
-      nav.classList.remove("active");
-      nav.classList.contains("active") ? setIcon(false) : setIcon(true);
+      if (navStatus === 'active') {
+        setNavStatus('navbar-container');
+        setIcon(true);
+      }
     }
   }
 
@@ -230,38 +236,38 @@ export default function Header() {
         </Pop>
       }
       <div style={{ display: "flex" }}>
-        <Left href={location.pathname == '/gift' ? '/gift' : '/'}>
-          {state == "Sultanpur" && location.pathname != '/gift'
+        <Left href={(location.pathname === '/gift' || location?.state?.prevPath === '/gift') ? '/gift' : '/'}>
+          {state === "Sultanpur" && (location.pathname !== '/gift' && location?.state?.prevPath !== '/gift')
             &&
             <img
               src="/images/logoS.png"
               alt=""
-              style={{ "margin-top": "-4px" }}
+              style={{ "marginTop": "-4px" }}
             />
           }
-          {state == "Noida" && location.pathname != '/gift'
+          {state === "Noida" && (location.pathname !== '/gift' && location?.state?.prevPath !== '/gift')
             &&
             <img
               src="/images/logoN.png"
               alt=""
-              style={{ "margin-top": "-4px" }}
+              style={{ "marginTop": "-4px" }}
             />
           }
-          {!state && location.pathname != '/gift'
+          {!state && (location.pathname !== '/gift' && location?.state?.prevPath !== '/gift')
             &&
             <img
               src="/images/Mainlogo.png"
               alt=""
-              style={{ "margin-top": "-4px" }}
+              style={{ "marginTop": "-4px" }}
             />
           }
           {
-            location.pathname == '/gift' && <img src="/images/Gifting.png"
+            (location.pathname === '/gift' || location?.state?.prevPath === '/gift') && <img src="/images/Gifting.png"
               alt=""
-              style={{ "margin-top": "-4px" }} />
+              style={{ "marginTop": "-4px" }} />
           }
         </Left>
-        {location.pathname != '/gift' && <Filter onClick={handleChange}>
+        {(location.pathname !== '/gift' && location?.state?.prevPath !== '/gift') && <Filter onClick={handleChange}>
           <Icon icon="ic:baseline-location-on" width="28" height="28" />
           <img
             className="icon-features"
@@ -271,23 +277,23 @@ export default function Header() {
         </Filter>}
       </div>
       <StyledNav>
-        <StyledNavBar className="navbar-container">
+        <StyledNavBar className={navStatus}>
           <ul className="navbar" ref={refOne}>
             <li>
-              {location.pathname != '/gift' && <a
+              {(location.pathname !== '/gift' && location?.state?.prevPath !== '/gift') && <a
                 className="link-features"
                 href="/gift"
               >
                 Gift Engine
               </a>}
-              {location.pathname == '/gift' && <a
+              {(location.pathname === '/gift' || location?.state?.prevPath === '/gift') && <a
                 className="link-features"
                 href="/"
               >
                 Home
               </a>}
             </li>
-             <li>
+            <li>
               <a
                 className="link-company"
                 onClick={e => handleDropdown(e)}
@@ -302,23 +308,31 @@ export default function Header() {
               </a>
               <StyledDropdown className="dropdown company">
                 <ul className="dropdown-menu">
-                  <MenuItem href="/myorders">My Orders</MenuItem>
-                  {admin && <MenuItem href="/headq">Admin</MenuItem>}
-                  {merchant && <MenuItem href="/inventory">Admin</MenuItem>}
+                  <MenuItem onClick={() => {
+                    history.push({ pathname: '/myorders', state: { prevPath: location.pathname } })
+                  }}>My Orders</MenuItem>
+                  {admin && <MenuItem onClick={() => {
+                    history.push({ pathname: '/headq', state: { prevPath: location.pathname } })
+                  }}>Admin</MenuItem>}
+                  {merchant && <MenuItem onClick={() => {
+                    history.push({ pathname: '/inventory', state: { prevPath: location.pathname } })
+                  }}>Admin</MenuItem>}
                   {user && <MenuItem onClick={handleClick}>Sign Out</MenuItem>}
                   {!user && <MenuItem href="/login">Sign In</MenuItem>}
                 </ul>
               </StyledDropdown>
             </li>
             <li>
-              <a href="/about">About</a>
+              <p style={{ cursor: 'pointer' }} onClick={() => {
+                history.push({ pathname: '/about', state: { prevPath: location.pathname } })
+              }}>About</p>
             </li>
             <li>
               <a onClick={goToTop} style={{ cursor: "pointer" }}>Contact Us</a>
             </li>
           </ul>
         </StyledNavBar>
-        {location.pathname!='/gift' && <Link to="/cart">
+        {(location.pathname !== '/gift' && location?.state?.prevPath !== '/gift') && <Link to="/cart">
           <MenuItem>
             <Badge badgeContent={quantity} color="primary">
               <ShoppingCartOutlined />

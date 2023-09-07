@@ -204,7 +204,7 @@ export const About = () => {
         </Context>
       </Content>
 
-      <Content2>
+      {/* <Content2>
         <Head>Founders</Head>
         <Context2>
           <Box>
@@ -243,7 +243,7 @@ export const About = () => {
             </Des>
           </Box>
         </Context2>
-      </Content2>      
+      </Content2>       */}
       <Footer />
     </Container>
   );

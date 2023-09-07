@@ -172,7 +172,7 @@ const Home = () => {
             <Option>1 Kg</Option>
             {state == "Sultanpur" &&<Option>1.5 Kg</Option>}
             {state == "Sultanpur" &&<Option>2 Kg</Option>}
-            {state == "Sultanpur" &&<Option>2 L</Option>}
+            {state == "Sultanpur" &&<Option>2.25 L</Option>}
           </Select>
         </Filter>
         <Filter>

@@ -126,7 +126,7 @@ const Product = ({ item, cat, filters }) => {
             {item.title} ({filters.size.toUpperCase()})
           </Name>
         )}
-      {item.size[0] == "2 L" && <Name>{item.title} (2L)</Name>}
+      {item.size[0] == "2.25 L" && <Name>{item.title} (2.25 L)</Name>}
       {item.categories[0] == "Chaats and Juices" && <Name>{item.title}</Name>}
       {item.categories[0] == "Foods and Beverages" && item.size[0] == "Regular" && (
         <Name> {item.title} </Name>
@@ -139,7 +139,7 @@ const Product = ({ item, cat, filters }) => {
       <div style={{ display: "flex", justifyContent: "center" }}>
 
         {
-          (filters.size == undefined || filters.size == "Quantity") && item.size[0] !== "2 L" &&
+          (filters.size == undefined || filters.size == "Quantity") && item.size[0] !== "2.25 L" &&
 
           <div style={{ display: "flex" }}>
             <Price>₹{item.price[0]}</Price>
@@ -151,10 +151,10 @@ const Product = ({ item, cat, filters }) => {
           </div>
         }
         {
-          item.size[0] == "2 L" && item.location[0] == "Noida" && filters.size !== "2 L" && <Price>MRP</Price>
+          item.size[0] == "2.25 L" && item.location[0] == "Noida" && filters.size !== "2.25 L" && <Price>MRP</Price>
         }
         {
-          item.size[0] == "2 L" && item.location[0] == "Sultanpur" && filters.size !== "2 L" && <Price>MRP</Price>
+          item.size[0] == "2.25 L" && item.location[0] == "Sultanpur" && filters.size !== "2.25 L" && <Price>MRP</Price>
         }
         {
           filters.size == "0.5 Kg" && item.color[0] !== "Truffle" &&
@@ -266,13 +266,13 @@ const Product = ({ item, cat, filters }) => {
           </div>
         }
         {
-          filters.size == "2 L" && <Price>MRP</Price>
+          filters.size == "2.25 L" && <Price>MRP</Price>
         }
 
 
       </div>
-      {item.size[0] !== "2 L" && item.location[0] == "Sultanpur" && (<blink style={{ marginTop: "5px" }}>20% OFF</blink>)}
-      {item.location[0] == "Noida" && item.size[0] !== '2 L' && (<blink style={{ marginTop: "5px" }}>20% OFF</blink>)}
+      {item.size[0] !== "2.25 L" && item.location[0] == "Sultanpur" && (<blink style={{ marginTop: "5px" }}>20% OFF</blink>)}
+      {item.location[0] == "Noida" && item.size[0] !== '2.25 L' && (<blink style={{ marginTop: "5px" }}>20% OFF</blink>)}
       <Info>
         <Icon>
           <Link to={`/product/${item._id}`}>

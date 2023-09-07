@@ -87,7 +87,7 @@ const Loading = styled.div`
 `;
 
 const Login = () => {
-  var [username, setUsername] = useState("");
+  var [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const dispatch = useDispatch();
   const { isFetching, error, userNot, passNot } = useSelector(
@@ -96,18 +96,18 @@ const Login = () => {
 
   const handleClick = (e) => {
     e.preventDefault();
-    username = username.replace(/\s+/g, " ").trim();
-    login(dispatch, { username, password });
+    email = email.replace(/\s+/g, " ").trim();
+    login(dispatch, { email, password });
   };
 
-  const handleChangeUser = (e) =>{
-    setUsername(e.target.value);
-    if((userNot || passNot)) dispatch(resetSate());
+  const handleChangeUser = (e) => {
+    setEmail(e.target.value);
+    if ((userNot || passNot)) dispatch(resetSate());
   }
 
-  const handleChangePass = (e) =>{
+  const handleChangePass = (e) => {
     setPassword(e.target.value);
-    if((userNot || passNot)) dispatch(resetSate());
+    if ((userNot || passNot)) dispatch(resetSate());
   }
 
   return (
@@ -116,11 +116,11 @@ const Login = () => {
         <Title>SIGN IN</Title>
         <Form>
           <Input
-            placeholder="username"
+            placeholder="EMAIL ID"
             onChange={(e) => handleChangeUser(e)}
           />
           <Input
-            placeholder="password"
+            placeholder="PASSWORD"
             type="password"
             onChange={(e) => handleChangePass(e)}
           />

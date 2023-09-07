@@ -117,6 +117,7 @@ const Register = () => {
     e.preventDefault();
     username = username.replace(/\s+/g, " ").trim();
     var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    
     if (email.match(mailformat)) {
       register(dispatch, {
         username,
@@ -144,9 +145,6 @@ const Register = () => {
             placeholder="email"
             onChange={(e) => handleChangeEmail(e)}
           />
-          {validEmail && (
-            <Error>You have entered an invalid email address!</Error>
-          )}
           <Input
             type={"password"}
             placeholder="password"
@@ -158,16 +156,21 @@ const Register = () => {
             onChange={(e) => handleChangeConfirmPass(e)}
           />
           <Agreement>
-            By creating an account, I consent to the processing of my personal
-            data in accordance with the <b>PRIVACY POLICY</b>
+            BY CREATING AN ACCOUNT, I CONSENT TO THE PROCESSING OF MY PERSONAL DATA IN ACCORDANCE WITH THE
+            <b> PRIVACY POLICY</b>.
           </Agreement>
           <Button onClick={handleClick} disabled={isFetching}>
             CREATE
           </Button>
-          {userNot && <Error>User Existed Before with same Email I'd</Error>}
+          {userNot && <Error>User Already Exists</Error>}
           {passNot && (
-            <Error>Password and Confirm Password not matched !!</Error>
+            <Error>Password and Confirm Password Unmatched</Error>
           )}
+          {
+            validEmail && (
+              <Error>Invalid Email ID</Error>
+            )
+          }
         </Form>
 
         {isFetching && (
