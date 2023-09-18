@@ -1,7 +1,5 @@
 import {
-  FavoriteBorderOutlined,
-  SearchOutlined,
-  ShoppingCartOutlined,
+  Add, Remove
 } from "@material-ui/icons";
 import { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
@@ -18,6 +16,8 @@ const Info = styled.div`
   background-color: rgba(0, 0, 0, 0.2);
   z-index: 3;
   display: flex;
+  flex-direction: column;
+  gap: 20px;
   align-items: center;
   justify-content: center;
   transition: all 0.5s ease;
@@ -114,9 +114,48 @@ const Name = styled.div`
   font-weight: 800;
 `;
 
+const Button = styled.a`
+  padding: 5px 5px;
+  text-align: center;
+  border: 2px solid teal;
+  width: 100px;
+  background-color: white;
+  cursor: pointer;
+  font-weight: 600;
+  margin-left: 10px;
+  text-decoration: none;
+  color: black;
+  &:hover {
+    background-color: #f8f4f4;
+  }
+`;
+
+const Filter = styled.div`
+
+`;
+
+const FilterSize = styled.select`
+  margin-left: 10px;
+  padding: 5px 5px;
+  min-width: 100px;
+  border: 2px solid teal;
+  font-size: 16px;
+  font-weight: 600;
+`;
+
+const FilterSizeOption = styled.option``;
+
+const Wrapper = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 2fr 2fr;
+  grid-row-gap: 10px;
+`;
+
 const Product = ({ item, cat, filters }) => {
   const city = useSelector((state) => state.city.city);
-  // console.log(item);
+  const [quantity, setQuantity] = useState(1);
+
   return (
     <Container>
       {/* <Circle /> */}
@@ -280,14 +319,29 @@ const Product = ({ item, cat, filters }) => {
       </div>
       {item.size[0] !== "2.25 L" && item.location[0] == "Sultanpur" && (<blink style={{ marginTop: "5px" }}>20% OFF</blink>)}
       {item.location[0] == "Noida" && item.size[0] !== '2.25 L' && (<blink style={{ marginTop: "5px" }}>20% OFF</blink>)}
-      <Info>
-        <Icon>
-          <Link to={`/product/${item._id}`}>
-            <ShoppingCartOutlined />
-          </Link>
-        </Icon>
+      <Info width='100%'>
+        <Wrapper>
+          <Filter>
+            <FilterSize >
+              <FilterSizeOption disabled>Size</FilterSizeOption>
+              {item.size.map((s, i) => {
+                return <FilterSizeOption key={i}>{s}</FilterSizeOption>
+              })}
+            </FilterSize>
+          </Filter>
+          <Filter>
+            <FilterSize >
+              <FilterSizeOption disabled>Flavour</FilterSizeOption>
+              {item.color.map((s, i) => {
+                return <FilterSizeOption key={i}>{s}</FilterSizeOption>
+              })}
+            </FilterSize>
+          </Filter>
+          <Button>Add to Cart</Button>
+          <Button>Buy Now</Button>
+        </Wrapper>
       </Info>
-    </Container>
+    </Container >
   );
 };
 

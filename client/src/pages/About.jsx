@@ -89,6 +89,12 @@ export const About = () => {
       <Announcement />
       <Header />
       <Content>
+        <Head>Work for Social Cause</Head>
+        <Context>
+        For every order you place with us, we donate 5% of the net order value to the KOSHISH EDUCATIONAL & WELFARE SOCIETY (an initiative of one of the alumni of KNIT). The main aim of the NGO lies in imparting and providing the best educational facilities to the ones who are less privileged. You can mail us at contact@cakelaya.com, to know more about our previous donations to the society. We don't charge anything extra for the same, rather from the order you place, we just take out 5% of it to donate to the society.
+        </Context>
+      </Content>
+      <Content>
         <Head>About Us</Head>
         <Context>
           We are a bunch of students, currently studying at Kamla Nehru
@@ -199,7 +205,7 @@ export const About = () => {
           <br />
           <br />
           <div>
-            <b>Feedback Form</b>: <a href="https://forms.gle/YX9YoXUVBGdNb9Pa7">https://forms.gle/YX9YoXUVBGdNb9Pa7</a>
+            <b>Feedback Form</b>: <a href="https://forms.gle/EzorwsP25DPBBTpr9">https://forms.gle/EzorwsP25DPBBTpr9</a>
           </div>
         </Context>
       </Content>
