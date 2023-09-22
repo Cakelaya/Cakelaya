@@ -89,22 +89,15 @@ export const About = () => {
       <Announcement />
       <Header />
       <Content>
+        <Head>Work for Social Cause</Head>
+        <Context>
+          
+        </Context>
+      </Content>
+      <Content>
         <Head>About Us</Head>
         <Context>
-          We are a bunch of students, currently studying at Kamla Nehru
-          Institute of Technology, Sultanpur. One of the problems we observe
-          students encounters during a birthday party or some other occasion was
-          about getting an affordable and delicious cake. Students had to travel
-          for about 5-6 km to just get a cake. Few players had a monopoly. They
-          gave students cake at a very expensive rate. As they were very well
-          aware of the fact, that student has come 5-6 km far, he/she will
-          surely purchase it and try to get back to the hostel as soon as
-          possible. To avoid students experiencing such an unlikely scenario, we
-          thought of providing a solution for the same problem. Cakeलाया ? is a
-          start-up based on delivering cakes and other savouries to your room at
-          your convenience. All you need is just to take a chill pill, enjoy the
-          occasion with your closed ones and let us take care of all your cake
-          and zingy needs!
+        For every order you place with us, we donate 5% of the net order value to the KOSHISH EDUCATIONAL & WELFARE SOCIETY (an initiative of one of the alumni of KNIT). The main aim of the NGO lies in imparting and providing the best educational facilities to the ones who are less privileged. You can mail us at contact@cakelaya.com, to know more about our previous donations to the society. We don't charge anything extra for the same, rather from the order you place, we just take out 5% of it to donate to the society.
         </Context>
       </Content>
       <Content style={{ border: "none" }}>
@@ -199,7 +192,7 @@ export const About = () => {
           <br />
           <br />
           <div>
-            <b>Feedback Form</b>: <a href="https://forms.gle/YX9YoXUVBGdNb9Pa7">https://forms.gle/YX9YoXUVBGdNb9Pa7</a>
+            <b>Feedback Form</b>: <a href="https://forms.gle/EzorwsP25DPBBTpr9">https://forms.gle/EzorwsP25DPBBTpr9</a>
           </div>
         </Context>
       </Content>
