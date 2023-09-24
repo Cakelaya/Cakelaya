@@ -453,9 +453,9 @@ const Cart = () => {
             <TopButton>CONTINUE SHOPPING</TopButton>
           </Link>
 
-          <TopTexts>
-            <TopText>Shopping Bag({cart.quantity})</TopText>
-          </TopTexts>
+          <Link to="/form">
+            <TopButton>CHECKOUT NOW</TopButton>
+          </Link>
         </Top>
         <Bottom>
           <Info>
