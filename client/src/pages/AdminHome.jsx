@@ -159,7 +159,7 @@ const Home = () => {
                 <b>Delivery Time</b>: {item.time}
               </Detail>
               <Detail>
-                <b>Occassion Type</b>: {item.occassion}
+                <b>Occasion Type</b>: {item.occassion}
               </Detail>
               <button
                 id={"bnt-" + i}

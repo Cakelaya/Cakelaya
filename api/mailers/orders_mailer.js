@@ -62,7 +62,6 @@ exports.newOrderToNoida = (order) => {
     {
       from: "support@cakelaya.com",
       to: [
-        "Mrranan75657@gmail.com",
         "ayushsinghbohra8595@gmail.com",
         "mohan8447197270@gmail.com",
       ],

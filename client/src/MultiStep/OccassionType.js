@@ -160,8 +160,8 @@ const OccassionType = ({ prevStep, nextStep, values, handleChange }) => {
       <Slide>
         <Box>
           <Head>
-            <Title>Select Occassion</Title>
-            {/* <span>(Enter occassion of the receipent, whom you wanna gift!)</span> */}
+            <Title>Select Occasion</Title>
+            {/* <span>(Enter occasion of the receipent, whom you wanna gift!)</span> */}
           </Head>
           <Body>
             <button

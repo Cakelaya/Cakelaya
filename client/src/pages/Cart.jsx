@@ -450,7 +450,7 @@ const Cart = () => {
         <Title>YOUR BAG</Title>
         <Top>
           <Link to="/">
-            <TopButton>CONTINUE SHOPPING</TopButton>
+            <TopButton>BACK TO HOME</TopButton>
           </Link>
 
           <Link to="/form">
@@ -605,11 +605,11 @@ const Cart = () => {
               </SummaryItem>
               <SummaryItem>
                 <SummaryItemText>Estimated Shipping</SummaryItemText>
-                <SummaryItemPrice>?</SummaryItemPrice>
+                <SummaryItemPrice>{city==='Sultanpur'?0:50}</SummaryItemPrice>
               </SummaryItem>
               <SummaryItem id="total" type="total">
                 <SummaryItemText>Total</SummaryItemText>
-                <SummaryItemPrice>?</SummaryItemPrice>
+                <SummaryItemPrice>{cart.total + (city==='Sultanpur'?0:50)}</SummaryItemPrice>
               </SummaryItem>
               <Button href="/form">CHECKOUT NOW</Button>
             </Summary>
