@@ -14,7 +14,7 @@ export const sliderItems = [
     img: "images/pine2.png",
     title: "Pineapple Cake",
     desc: "Try our exclusive range of Pineapple cakes! Order now and dive into the ultimate experience of cream melting into your mouth!",
-    bg: "images/back2.jpg",
+    bg: "images/back.jpg",
     cat: "Pineapple",
     price: 289,
     height: "70%"
@@ -35,7 +35,7 @@ export const sliderItems = [
     title: "Vanilla Cake",
     desc: "Try our exclusive range of Vanilla cakes! Order now and dive into the ultimate experience of cream melting into your mouth!",
     cat: "Vanilla",
-    bg: "images/back2.jpg",
+    bg: "images/back.jpg",
     price: 289,
     height: "70%"
   },
@@ -54,10 +54,10 @@ export const sliderItems = [
     img: "images/choco.png",
     title: "Chocolate Cake",
     desc: "Try our exclusive range of Chocolate cakes! Order now and dive into the ultimate experience of cream melting into your mouth!",
-    bg: "images/back2.jpg",
+    bg: "images/back.jpg",
     cat: "Chocolate",
     price: 319,
-    height: "70%"
+    height: "60%"
   },
   {
     id: 6,
@@ -74,10 +74,10 @@ export const sliderItems = [
     img: "images/design.png",
     title: "Designer Cake",
     desc: "Try our exclusive range of Designer cakes! Order now and dive into the ultimate experience of cream melting into your mouth!",
-    bg: "images/back2.jpg",
+    bg: "images/back.jpg",
     cat: "Designer",
     price: 599,
-    height: "70%"
+    height: "65%"
   },
   {
     id: 8,
@@ -87,17 +87,17 @@ export const sliderItems = [
     bg: "images/back.jpg",
     cat: "Red Velvet",
     price: 449,
-    height: "70%"
+    height: "65%"
   },
   {
     id: 9,
     img: "images/special.png",
     title: "Special Cake",
     desc: "Try our exclusive range of Special cakes! Order now and dive into the ultimate experience of cream melting into your mouth!",
-    bg: "images/back2.jpg",
+    bg: "images/back.jpg",
     cat: "Special",
     price: 319,
-    height: "100%"
+    height: "61%"
   },
 ];
 
@@ -117,7 +117,7 @@ export const sliderItems2 = [
     img: "images/pine3.png",
     title: "Pineapple Cake",
     desc: "Try our exclusive range of Pineapple cakes! Order now and dive into the ultimate experience of cream melting into your mouth!",
-    bg: "images/back2.jpg",
+    bg: "images/back.jpg",
     cat: "Pineapple",
     price: 249,
     height: "60%"
@@ -138,7 +138,7 @@ export const sliderItems2 = [
     title: "Vanilla Cake",
     desc: "Try our exclusive range of Vanilla cakes! Order now and dive into the ultimate experience of cream melting into your mouth!",
     cat: "Vanilla",
-    bg: "images/back2.jpg",
+    bg: "images/back.jpg",
     price: 249,
     height: "65%"
   },
@@ -157,7 +157,7 @@ export const sliderItems2 = [
     img: "images/choco2.png",
     title: "Chocolate Cake",
     desc: "Try our exclusive range of Chocolate cakes! Order now and dive into the ultimate experience of cream melting into your mouth!",
-    bg: "images/back2.jpg",
+    bg: "images/back.jpg",
     cat: "Chocolate",
     price: 289,
     height: "70%"
@@ -170,14 +170,14 @@ export const sliderItems2 = [
     bg: "images/back.jpg",
     cat: "Truffle",
     price: 349,
-    height: "60%"
+    height: "55%"
   },
   {
     id: 7,
     img: "images/design2.png",
     title: "Designer Cake",
     desc: "Try our exclusive range of Designer cakes! Order now and dive into the ultimate experience of cream melting into your mouth!",
-    bg: "images/back2.jpg",
+    bg: "images/back.jpg",
     cat: "Designer",
     price: 519,
     height: "52%"
@@ -197,7 +197,7 @@ export const sliderItems2 = [
     img: "images/special2.png",
     title: "Special Cake",
     desc: "Try our exclusive range of Special cakes! Order now and dive into the ultimate experience of cream melting into your mouth!",
-    bg: "images/back2.jpg",
+    bg: "images/back.jpg",
     cat: "Special",
     price: 289,
     height: "60%"

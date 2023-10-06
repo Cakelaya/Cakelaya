@@ -14,6 +14,9 @@ import Header from "../components/Header";
 // import addNotification from "react-push-notification";
 // import { Notifications } from "react-push-notification";
 
+const Container = styled.div`
+`;
+
 const Head = styled.h1`
   width: 100%;
   text-align: center;
@@ -144,7 +147,7 @@ const Home = () => {
   }
 
   return (
-    <div>
+    <Container>
       {/* {!state &&
         <Pop>
           <Filter>
@@ -186,7 +189,7 @@ const Home = () => {
       </FilterContainer>
       <Products cat={cat} filters={filters} sort={sort} />
       <Footer />
-    </div>
+    </Container>
   );
 };
 
