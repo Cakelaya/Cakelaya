@@ -605,11 +605,11 @@ const Cart = () => {
               </SummaryItem>
               <SummaryItem>
                 <SummaryItemText>Estimated Shipping</SummaryItemText>
-                <SummaryItemPrice>{city==='Sultanpur'?0:50}</SummaryItemPrice>
+                <SummaryItemPrice>₹ {city==='Sultanpur'?0:50}</SummaryItemPrice>
               </SummaryItem>
               <SummaryItem id="total" type="total">
                 <SummaryItemText>Total</SummaryItemText>
-                <SummaryItemPrice>{cart.total + (city==='Sultanpur'?0:50)}</SummaryItemPrice>
+                <SummaryItemPrice>₹ {cart.total + (city==='Sultanpur'?0:50)}</SummaryItemPrice>
               </SummaryItem>
               <Button href="/form">CHECKOUT NOW</Button>
             </Summary>

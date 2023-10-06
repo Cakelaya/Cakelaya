@@ -75,10 +75,11 @@ const Right = styled.div`
   ${mobile({ backgroundColor: "#fff8f8" })}
 `;
 
-const ContactItem = styled.div`
+const ContactItem = styled.a`
   margin-bottom: 20px;
   display: flex;
   align-items: center;
+  text-decoration: none;
 `;
 
 const Payment = styled.img`
@@ -102,7 +103,7 @@ const Footer = () => {
           all your cake and zingy needs!
         </Desc>
         <SocialContainer>
-          <SocialIcon color="4267B2" href="https://www.facebook.com/cakelaya" target="_blank">
+          <SocialIcon color="4267B2" href="https://www.facebook.com/cakelaya/" target="_blank">
             <Facebook />
           </SocialIcon>
           <SocialIcon
@@ -141,8 +142,8 @@ const Footer = () => {
         {/* <ContactItem>
           <WhatsApp style={{ marginRight: "10px" }} /> +91-6387836907
         </ContactItem> */}
-        <ContactItem>
-          <MailOutline style={{ marginRight: "10px" }} /> support@cakelaya.com
+        <ContactItem >
+          <MailOutline style={{ marginRight: "10px" }} /> <Link href="mailto:support@cakelaya.com" >support@cakelaya.com</Link>
         </ContactItem>
         <Payment src="https://i.ibb.co/Qfvn4z6/payment.png" />
       </Right>

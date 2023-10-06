@@ -85,6 +85,11 @@ const Summary = styled.div`
   margin-left: 15px;
 `;
 
+const Link = styled.a`
+  color: black;
+  text-decoration: none;
+`;
+
 const Home = () => {
   const [order, setOrders] = useState([]);
   const city = useSelector((state) => state.city.city);
@@ -201,7 +206,7 @@ const Home = () => {
                 <b>Name</b>: {item.name.split("*")[0]}
               </Detail>
               <Detail>
-                <b>Mobile Number</b>: {item.number}
+                <b>Mobile Number</b>: <Link href="tel:" >{item.number}</Link>
               </Detail>
               <Detail>
                 <b>Address</b>: {item.address}

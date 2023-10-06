@@ -28,7 +28,8 @@ const cartSlice = createSlice({
       for (let i = 0; i < state.products.length; i++) {
         if (
           action.payload.title === state.products[i].title &&
-          action.payload.size === state.products[i].size
+          action.payload.size === state.products[i].size &&
+          action.payload.color === state.products[i].color
         ) {
           state.products[i].quantity += action.payload.quantity;
           state.total += Number(action.payload.price * action.payload.quantity);

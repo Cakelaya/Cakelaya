@@ -508,7 +508,7 @@ const Form = () => {
             <SummaryItemPrice>₹ {cart.total}</SummaryItemPrice>
           </SummaryItem>
           <SummaryItem>
-            <SummaryItemText>Estimated Shipping</SummaryItemText>
+            <SummaryItemText>Shipping Charges</SummaryItemText>
             
             
               {city==='Sultanpur' && <SummaryItemPrice>₹ 0</SummaryItemPrice>}

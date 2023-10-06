@@ -97,6 +97,10 @@ const Topic = styled.h1`
   margin-top: 10px;
   font-weight: 500;
 `;
+const Link = styled.a`
+  color: black;
+  text-decoration: none;
+`;
 
 const Home = () => {
   const [order, setOrders] = useState([]);
@@ -186,7 +190,7 @@ const Home = () => {
                 </Detail>
                 <br></br>
                 <Detail>
-                  <span>(For support, mail us at: <b>support@cakelaya.com</b>.)</span>
+                  <span>(For support, mail us at: <Link href="mailto:support@cakelaya.com" ><b>support@cakelaya.com</b></Link>.)</span>
                 </Detail>
                 <button
                   id={"bnt2-" + i}
