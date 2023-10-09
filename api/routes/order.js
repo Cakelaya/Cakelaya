@@ -81,7 +81,7 @@ router.put("/headapp/:id", verifyTokenAndAdmin, async (req, res) => {
     );
 
     const user = await User.findById(updatedOrder.userId);
-    ordersMailer.newOrderToUser(savedOrder, user.email, "Order Placed Successfully!")
+    ordersMailer.newOrderToUser(updatedOrder, user.email, "Order Placed Successfully!")
     if (req.body.city == "Sultanpur") {
       ordersMailer.newOrderToSultanpur(updatedOrder);
     } else if (req.body.city == "Noida") {
@@ -106,11 +106,11 @@ router.put("/headapp/reject/:id", verifyTokenAndAdmin, async (req, res) => {
       },
       { new: true }
     );
-    
     const user = await User.findById(updatedOrder.userId);
-    ordersMailer.newOrderToUser(savedOrder, user.email, "Order Rejected!")
+    ordersMailer.newOrderToUser(updatedOrder, user.email, "Order Rejected!")
     res.status(200).json(updatedOrder);
   } catch (err) {
+    console.log(err)
     res.status(500).json(err);
   }
 });

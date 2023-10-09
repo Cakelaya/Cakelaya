@@ -102,6 +102,7 @@ const Link = styled.a`
 const Home = () => {
   const [order, setOrders] = useState([]);
   const city = useSelector((state) => state.city.city);
+  const [click, setClick] = useState(0);
 
   useEffect(() => {
     const getOrders = async () => {
@@ -113,7 +114,7 @@ const Home = () => {
       }
     };
     getOrders();
-  });
+  },[click]);
 
   const handleClick = (i) => {
     const element = document.getElementById(i).style.display;
@@ -128,22 +129,15 @@ const Home = () => {
   };
 
   const updateApp = async (id) => {
+    setClick(prev => prev + 1)
     try {
       await userRequest.put("/orders/headapp/" + order[id]._id, { city: city });
       const idx = "bnt-" + id;
     } catch (error) {}
   };
 
-  const updateAppforJuice = async (id) => {
-    try {
-      await userRequest.put("/orders/headapp/" + order[id]._id, {
-        product: "Chaats and Juices",
-      });
-      const idx = "bnt-" + id;
-    } catch (error) {}
-  };
-
   const updateDeli = async (id) => {
+    setClick(prev => prev + 1)
     try {
       await userRequest.put("/orders/deliver/" + order[id]._id);
       const idx = "bnt3-" + id;
@@ -152,6 +146,7 @@ const Home = () => {
   };
 
   const updateStock = async (id) => {
+    setClick(prev => prev + 1)
     try {
       await userRequest.delete("/orders/" + order[id]._id);
       const idx = "bnt3-" + id;
@@ -160,6 +155,7 @@ const Home = () => {
   };
 
   const updateReq = async (id) => {
+    setClick(prev => prev + 1)
     try {
       await userRequest.put("/orders/headapp/reject/" + order[id]._id);
       const idx = "bnt-" + id;
@@ -167,6 +163,7 @@ const Home = () => {
   };
 
   const updateRemove = async (id) => {
+    setClick(prev => prev + 1)
     try {
       await userRequest.put("/orders/headapp/remove/" + order[id]._id);
       const idx = "bnt-" + id;

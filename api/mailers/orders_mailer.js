@@ -32,7 +32,6 @@ exports.newOrderToUser = (order, mail, subject) => {
     { order: order },
     "/new_order_to_user.ejs"
   );
-
   nodemailer.transporter.sendMail(
     {
       from: "support@cakelaya.com",
