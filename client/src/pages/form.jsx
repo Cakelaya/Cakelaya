@@ -331,7 +331,7 @@ const Form = () => {
   return (
     <div>
       {
-        false &&
+        showMessage &&
         <Popup>
           <PopupMessage>
             <p>NOTE: Our services are currently available only from 8:00 AM to 10:00 PM!</p>
