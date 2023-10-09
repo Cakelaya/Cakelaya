@@ -27,6 +27,29 @@ exports.newOrder = (order) => {
   );
 };
 
+exports.newOrderToUser = (order, mail) => {
+  let htmlString = nodemailer.renderTemplate(
+    { order: order },
+    "/new_order_to_user.ejs"
+  );
+
+  nodemailer.transporter.sendMail(
+    {
+      from: "support@cakelaya.com",
+      to: [mail],
+      subject: "Your Order",
+      html: htmlString,
+    },
+    (err, info) => {
+      if (err) {
+        console.log("Error in sending mail", err);
+        return;
+      }
+      return;
+    }
+  );
+};
+
 exports.newOrderToSultanpur = (order) => {
   let htmlString = nodemailer.renderTemplate(
     { order: order },

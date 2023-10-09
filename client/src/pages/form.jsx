@@ -227,7 +227,7 @@ const Form = () => {
   const cart = useSelector((state) => state.cart);
   const category = useSelector((state) => state.cart.category);
 
-  const user = useSelector((state) => state.user);
+  const user = useSelector((state) => state.user.currentUser);
   const [time, setTime] = useState("90 Minutes Delivery");
   const [number, setNumber] = useState("");
   const [cakename, setCakename] = useState("");
@@ -242,7 +242,7 @@ const Form = () => {
   const [occassion, setOccassion] = useState("Birthday");
   const dispatch = useDispatch();
   const history = useHistory();
-  const userId = user.currentUser._id;
+  const userId = user._id;
 
   const ccity = useSelector((state) => state.city);
   const [city, setCity] = useState(ccity.city);
@@ -313,6 +313,7 @@ const Form = () => {
       occassion: occassion,
       userId: userId,
       orderTime: String(captureTime),
+      email: user.email,
     });
     // console.log(res.data._id);
     const orderId = res.data._id;

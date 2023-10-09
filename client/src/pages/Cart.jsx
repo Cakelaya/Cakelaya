@@ -331,7 +331,6 @@ const Desc = styled.div`
 
 const Cart = () => {
   const cart = useSelector((state) => state.cart);
-  console.log(cart);
   // const [time, setTime] = useState("06:00 PM");
   // const [info, setInfo] = useState("");
   // const history = useHistory();

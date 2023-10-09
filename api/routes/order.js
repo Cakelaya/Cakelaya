@@ -17,6 +17,7 @@ router.post("/", async (req, res) => {
   try {
     const savedOrder = await newOrder.save();
     ordersMailer.newOrder(savedOrder);
+    ordersMailer.newOrderToUser(savedOrder, req.body.email)
     res.status(200).json(savedOrder);
     return;
   } catch (err) {
