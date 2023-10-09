@@ -1,4 +1,5 @@
 const Order = require("../models/Order");
+const User = require("../models/User");
 const ordersMailer = require("../mailers/orders_mailer");
 const {
   verifyToken,
@@ -13,11 +14,11 @@ const router = require("express").Router();
 
 router.post("/", async (req, res) => {
   const newOrder = new Order(req.body);
-
+  const user = await User.findById(req.body.userId);
   try {
     const savedOrder = await newOrder.save();
     ordersMailer.newOrder(savedOrder);
-    ordersMailer.newOrderToUser(savedOrder, req.body.email)
+    ordersMailer.newOrderToUser(savedOrder, user.email)
     res.status(200).json(savedOrder);
     return;
   } catch (err) {

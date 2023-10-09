@@ -36,7 +36,7 @@ exports.newOrderToUser = (order, mail) => {
   nodemailer.transporter.sendMail(
     {
       from: "support@cakelaya.com",
-      to: [mail],
+      to: mail,
       subject: "Your Order",
       html: htmlString,
     },

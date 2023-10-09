@@ -313,7 +313,6 @@ const Form = () => {
       occassion: occassion,
       userId: userId,
       orderTime: String(captureTime),
-      email: user.email,
     });
     // console.log(res.data._id);
     const orderId = res.data._id;
