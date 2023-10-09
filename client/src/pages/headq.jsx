@@ -5,7 +5,6 @@ import Navbar from "../components/Navbar";
 import Header from "../components/Header";
 import { useSelector } from "react-redux";
 
-
 const Container = styled.div`
   margin: 10px;
   padding: 0px;
@@ -46,7 +45,17 @@ const Card = styled.div`
 const Detail = styled.div`
   margin-top: 5px;
   blink {
-    background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);   -webkit-background-clip: text;
+    background-image: linear-gradient(
+      to left,
+      violet,
+      indigo,
+      blue,
+      green,
+      yellow,
+      orange,
+      red
+    );
+    -webkit-background-clip: text;
     color: transparent;
     font-weight: 900;
     animation: 2s linear infinite condemned_blink_effect;
@@ -122,14 +131,16 @@ const Home = () => {
     try {
       await userRequest.put("/orders/headapp/" + order[id]._id, { city: city });
       const idx = "bnt-" + id;
-    } catch (error) { }
+    } catch (error) {}
   };
 
   const updateAppforJuice = async (id) => {
     try {
-      await userRequest.put("/orders/headapp/" + order[id]._id, { product: "Chaats and Juices" });
+      await userRequest.put("/orders/headapp/" + order[id]._id, {
+        product: "Chaats and Juices",
+      });
       const idx = "bnt-" + id;
-    } catch (error) { }
+    } catch (error) {}
   };
 
   const updateDeli = async (id) => {
@@ -137,7 +148,7 @@ const Home = () => {
       await userRequest.put("/orders/deliver/" + order[id]._id);
       const idx = "bnt3-" + id;
       document.getElementById(idx).style.backgroundColor = "lightgreen";
-    } catch (error) { }
+    } catch (error) {}
   };
 
   const updateStock = async (id) => {
@@ -145,21 +156,21 @@ const Home = () => {
       await userRequest.delete("/orders/" + order[id]._id);
       const idx = "bnt3-" + id;
       document.getElementById(idx).style.backgroundColor = "lightgreen";
-    } catch (error) { }
+    } catch (error) {}
   };
 
   const updateReq = async (id) => {
     try {
       await userRequest.put("/orders/headapp/reject/" + order[id]._id);
       const idx = "bnt-" + id;
-    } catch (error) { }
+    } catch (error) {}
   };
 
   const updateRemove = async (id) => {
     try {
       await userRequest.put("/orders/headapp/remove/" + order[id]._id);
       const idx = "bnt-" + id;
-    } catch (error) { }
+    } catch (error) {}
   };
 
   return (
@@ -173,23 +184,41 @@ const Home = () => {
             <Card key={i}>
               <Detail>
                 <b>Restaurant Update</b>:
-                {item.status == "pending" && <blink> YET TO BE ACCEPTED!</blink>}
+                {item.status == "pending" && (
+                  <blink> YET TO BE ACCEPTED!</blink>
+                )}
                 {item.status == "approve" && <blink> ORDER ACCEPTED!</blink>}
                 {item.status == "reject" && <blink> ORDER REJECTED!</blink>}
               </Detail>
               <Detail>
                 <b>Customer Update</b>:
-                {item.headApp == "amount" &&
-                  <blink> AWAITING PAYMENT CONFIRMATION FROM THE BANK! ORDER NOT CONFIRMED YET!</blink>
-                }
+                {item.headApp == "amount" && (
+                  <blink>
+                    {" "}
+                    AWAITING PAYMENT CONFIRMATION FROM THE BANK! ORDER NOT
+                    CONFIRMED YET!
+                  </blink>
+                )}
                 {item.headApp == "pending" && (
-                  <blink> PAYMENT SUCCESSFUL! ORDER CONFIRMED! ORDER YET TO BE ACCEPTED BY THE RESTAURANT!</blink>
+                  <blink>
+                    {" "}
+                    PAYMENT SUCCESSFUL! ORDER CONFIRMED! ORDER YET TO BE
+                    ACCEPTED BY THE RESTAURANT!
+                  </blink>
                 )}
                 {item.headApp == "approve" && item.delivered == "pending" && (
-                  <blink> ORDER ACCEPTED BY THE RESTAURANT! YOUR ORDER IS BEING PREPARED!</blink>
+                  <blink>
+                    {" "}
+                    ORDER ACCEPTED BY THE RESTAURANT! YOUR ORDER IS BEING
+                    PREPARED!
+                  </blink>
                 )}
                 {item.headApp == "reject" && (
-                  <blink> ORDER REQUEST REJECTED! AMOUNT IF DEDUCTED, WILL BE REFUNDED!</blink>
+                  <blink>
+                    {" "}
+                    ORDER REQUEST REJECTED! AMOUNT IF DEDUCTED, WILL BE
+                    REFUNDED!
+                  </blink>
                 )}
                 {item.delivered == "approve" && <blink> DELIVERED</blink>}
               </Detail>
@@ -206,7 +235,14 @@ const Home = () => {
                 <b>Name</b>: {item.name.split("*")[0]}
               </Detail>
               <Detail>
-                <b>Mobile Number</b>: <Link href="tel:" >{item.number}</Link>
+                <b>Mobile Number</b>:{" "}
+                <Link
+                  onClick={() => {
+                    window.location.href = `tel:${item.number}`;
+                  }}
+                >
+                  {item.number}
+                </Link>
               </Detail>
               <Detail>
                 <b>Address</b>: {item.address}

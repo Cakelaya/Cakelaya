@@ -112,7 +112,7 @@ const Home = () => {
       await userRequest.put("/orders/" + order[id]._id);
       const idx = "bnt-" + id;
       document.getElementById(idx).style.backgroundColor = "lightgreen";
-    } catch (error) { }
+    } catch (error) {}
   };
 
   const updateDeli = async (id) => {
@@ -120,7 +120,7 @@ const Home = () => {
       await userRequest.put("/orders/deliver/" + order[id]._id);
       const idx = "bnt3-" + id;
       document.getElementById(idx).style.backgroundColor = "lightgreen";
-    } catch (error) { }
+    } catch (error) {}
   };
 
   const updateReq = async (id) => {
@@ -128,7 +128,7 @@ const Home = () => {
       await userRequest.put("/orders/reject/" + order[id]._id);
       const idx = "bnt3-" + id;
       document.getElementById(idx).style.backgroundColor = "lightgreen";
-    } catch (error) { }
+    } catch (error) {}
   };
 
   return (
@@ -152,7 +152,14 @@ const Home = () => {
                 <b>Name</b>: {item.name.split("*")[0]}
               </Detail>
               <Detail>
-                <b>Mobile Number</b>: <Link href="tel:" >{item.number}</Link>
+                <b>Mobile Number</b>:{" "}
+                <Link
+                  onClick={() => {
+                    window.location.href = `tel:${item.number}`;
+                  }}
+                >
+                  {item.number}
+                </Link>
               </Detail>
               <Detail>
                 <b>Address</b>: {item.address}
