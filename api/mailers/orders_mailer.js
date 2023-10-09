@@ -14,7 +14,7 @@ exports.newOrder = (order) => {
         "abhimanyusolanki10@gmail.com",
         "advit.20404@knit.ac.in",
       ],
-      subject: "New Order",
+      subject: "New Order!",
       html: htmlString,
     },
     (err, info) => {
@@ -27,7 +27,7 @@ exports.newOrder = (order) => {
   );
 };
 
-exports.newOrderToUser = (order, mail) => {
+exports.newOrderToUser = (order, mail, subject) => {
   let htmlString = nodemailer.renderTemplate(
     { order: order },
     "/new_order_to_user.ejs"
@@ -37,7 +37,7 @@ exports.newOrderToUser = (order, mail) => {
     {
       from: "support@cakelaya.com",
       to: mail,
-      subject: "Your Order",
+      subject: subject,
       html: htmlString,
     },
     (err, info) => {
@@ -62,7 +62,7 @@ exports.newOrderToSultanpur = (order) => {
       to: [
         "sateesh9883@gmail.com",
       ],
-      subject: "New Order",
+      subject: "New Order!",
       html: htmlString,
     },
     (err, info) => {
@@ -88,7 +88,7 @@ exports.newOrderToNoida = (order) => {
         "ayushsinghbohra8595@gmail.com",
         "mohan8447197270@gmail.com",
       ],
-      subject: "New Order",
+      subject: "New Order!",
       html: htmlString,
     },
     (err, info) => {

@@ -14,11 +14,9 @@ const router = require("express").Router();
 
 router.post("/", async (req, res) => {
   const newOrder = new Order(req.body);
-  const user = await User.findById(req.body.userId);
   try {
     const savedOrder = await newOrder.save();
     ordersMailer.newOrder(savedOrder);
-    ordersMailer.newOrderToUser(savedOrder, user.email)
     res.status(200).json(savedOrder);
     return;
   } catch (err) {
@@ -82,6 +80,8 @@ router.put("/headapp/:id", verifyTokenAndAdmin, async (req, res) => {
       { new: true }
     );
 
+    const user = await User.findById(updatedOrder.userId);
+    ordersMailer.newOrderToUser(savedOrder, user.email, "Order Placed Successfully!")
     if (req.body.city == "Sultanpur") {
       ordersMailer.newOrderToSultanpur(updatedOrder);
     } else if (req.body.city == "Noida") {
@@ -106,6 +106,9 @@ router.put("/headapp/reject/:id", verifyTokenAndAdmin, async (req, res) => {
       },
       { new: true }
     );
+    
+    const user = await User.findById(updatedOrder.userId);
+    ordersMailer.newOrderToUser(savedOrder, user.email, "Order Rejected!")
     res.status(200).json(updatedOrder);
   } catch (err) {
     res.status(500).json(err);
