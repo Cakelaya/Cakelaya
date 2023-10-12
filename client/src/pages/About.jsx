@@ -23,7 +23,7 @@ const Context = styled.div`
   margin: 40px auto;
   padding: 10px;
   text-align: justify;
-  div{
+  div {
     text-align: left;
   }
   @media (max-width: 786px) {
@@ -91,13 +91,33 @@ export const About = () => {
       <Content>
         <Head>Work for Social Cause</Head>
         <Context>
-        For every order you place with us, we donate 5% of the net order value to the KOSHISH EDUCATIONAL & WELFARE SOCIETY (an initiative of one of the alumni of KNIT). The main aim of the NGO lies in imparting and providing the best educational facilities to the ones who are less privileged. You can mail us at contact@cakelaya.com, to know more about our previous donations to the society. We don't charge anything extra for the same, rather from the order you place, we just take out 5% of it to donate to the society.
+          For every order you place with us, we donate 5% of the net order value
+          to the KOSHISH EDUCATIONAL & WELFARE SOCIETY (an initiative of one of
+          the alumni of KNIT). The main aim of the NGO lies in imparting and
+          providing the best educational facilities to the ones who are less
+          privileged. You can mail us at contact@cakelaya.com, to know more
+          about our previous donations to the society. We don't charge anything
+          extra for the same, rather from the order you place, we just take out
+          5% of it to donate to the society.
         </Context>
       </Content>
       <Content>
         <Head>About Us</Head>
         <Context>
-        For every order you place with us, we donate 5% of the net order value to the KOSHISH EDUCATIONAL & WELFARE SOCIETY (an initiative of one of the alumni of KNIT). The main aim of the NGO lies in imparting and providing the best educational facilities to the ones who are less privileged. You can mail us at contact@cakelaya.com, to know more about our previous donations to the society. We don't charge anything extra for the same, rather from the order you place, we just take out 5% of it to donate to the society.
+          We are a bunch of students, currently studying at Kamla Nehru
+          Institute of Technology, Sultanpur. One of the problems we observe
+          students encounters during a birthday party or some other occasion was
+          about getting an affordable and delicious cake. Students had to travel
+          for about 5-6 km to just get a cake. Few players had a monopoly. They
+          gave students cake at a very expensive rate. As they were very well
+          aware of the fact, that student has come 5-6 km far, he/she will
+          surely purchase it and try to get back to the hostel as soon as
+          possible. To avoid students experiencing such an unlikely scenario, we
+          thought of providing a solution for the same problem. Cakeलाया ? is a
+          start-up based on delivering cakes and other savouries to your room at
+          your convenience. All you need is just to take a chill pill, enjoy the
+          occasion with your closed ones and let us take care of all your cake
+          and zingy needs!
         </Context>
       </Content>
       <Content style={{ border: "none" }}>
@@ -139,19 +159,19 @@ export const About = () => {
           <div>
             We value each of our customers every time, through premium products,
             services and value for money. We are driven by innovation,
-            technology &amp; people-first approach. Our core values encroach upon
-            Character, Commitment, Compliance, Doing the Most Difficult Task
-            First, Ethics, Fair-Play, Finishing to the End, Integrity,
+            technology &amp; people-first approach. Our core values encroach
+            upon Character, Commitment, Compliance, Doing the Most Difficult
+            Task First, Ethics, Fair-Play, Finishing to the End, Integrity,
             Ownership, Persistence, Transparency, and Trustworthiness.
             Compassion: Empathy, Gratitude, Inclusiveness and Respect. Customer
             Centric: Accountability, Customer (External as well as Internal i.e.
-            Employees &amp; Partners), Pro- Feedback, and Responsiveness. Collective
-            Growth: Community service, Cost-Consciousness, Inclusiveness,
-            Profitability, Social Responsibility, and Sustainability. Continuous
-            Transformation: Adaptability, Agility, Being Devil's Advocate,
-            Collaboration, Continuous Improvement, Curiosity, Diversity,
-            Experiment, Innovation, Introspection, Resilience, Sharing, and
-            Seeking Knowledge.
+            Employees &amp; Partners), Pro- Feedback, and Responsiveness.
+            Collective Growth: Community service, Cost-Consciousness,
+            Inclusiveness, Profitability, Social Responsibility, and
+            Sustainability. Continuous Transformation: Adaptability, Agility,
+            Being Devil's Advocate, Collaboration, Continuous Improvement,
+            Curiosity, Diversity, Experiment, Innovation, Introspection,
+            Resilience, Sharing, and Seeking Knowledge.
           </div>
           <ul>
             <li>
@@ -179,20 +199,51 @@ export const About = () => {
       <Content style={{ border: "none" }}>
         <Head>Refund and Cancellation</Head>
         <Context>
-          Currently, the option to cancel your order is not available on our website, so we request everyone to place the order with utmost care! In case, if you want to update your delivery address or change your cake flavour, that can be done by contacting the phone numbers mentioned below. For refunds, for requests with a genuine reason, your refund is processed immediately after verification, and the amount is refunded back to your original payment method within 1-2 business days. For any further queries, please feel free to write us at our official mail ID as mentioned below.
+          Currently, the option to cancel your order is not available on our
+          website, so we request everyone to place the order with utmost care!
+          In case, if you want to update your delivery address or change your
+          cake flavour, that can be done by contacting the phone numbers
+          mentioned below. For refunds, for requests with a genuine reason, your
+          refund is processed immediately after verification, and the amount is
+          refunded back to your original payment method within 1-2 business
+          days. For any further queries, please feel free to write us at our
+          official mail ID as mentioned below.
           <br></br>
           <br></br>
-          <div><b>NOTE:</b> In case of any refunds initiated by users, the amount will be refunded after a standard 5% order value deduction.</div>
+          <div>
+            <b>NOTE:</b> In case of any refunds initiated by users, the amount
+            will be refunded after a standard 5% order value deduction.
+          </div>
         </Context>
       </Content>
       <Content style={{ border: "none" }}>
         <Head>Privacy Policy</Head>
         <Context>
-          Your data stored with us is 100% safe as well as secured. We guarantee that your data or details, whether it be related to logging in or payment, won't be leaked under any circumstances. They are completely confidential. Even anyone at Cakeलाया ?, can't look out for any details. For us, the safety and security of the user are of utmost priority. At any point, if the user feels, that they want to remove their data from our database, they can mail us at our official email or contact us at the numbers mentioned below. We take strict actions against any security or safety breaches at our organisation. We believe that customers are next to god, and believe in providing them with the safest and most hassle-free experience. Your feedback will help us improve our services. Feel free to fill out the google form attached below, to give your feedback about our services. We respect your privacy and anonymity, and thus while filling out the form you won't be asked to enter your name/phone number/email ID or any personal details. For any queries, feel free to write to us at our official mail. Usually, we reply to emails within 48 hours. Sometimes, it may take more than that in case of high demand.
+          Your data stored with us is 100% safe as well as secured. We guarantee
+          that your data or details, whether it be related to logging in or
+          payment, won't be leaked under any circumstances. They are completely
+          confidential. Even anyone at Cakeलाया ?, can't look out for any
+          details. For us, the safety and security of the user are of utmost
+          priority. At any point, if the user feels, that they want to remove
+          their data from our database, they can mail us at our official email
+          or contact us at the numbers mentioned below. We take strict actions
+          against any security or safety breaches at our organisation. We
+          believe that customers are next to god, and believe in providing them
+          with the safest and most hassle-free experience. Your feedback will
+          help us improve our services. Feel free to fill out the google form
+          attached below, to give your feedback about our services. We respect
+          your privacy and anonymity, and thus while filling out the form you
+          won't be asked to enter your name/phone number/email ID or any
+          personal details. For any queries, feel free to write to us at our
+          official mail. Usually, we reply to emails within 48 hours. Sometimes,
+          it may take more than that in case of high demand.
           <br />
           <br />
           <div>
-            <b>Feedback Form</b>: <a href="https://forms.gle/EzorwsP25DPBBTpr9">https://forms.gle/EzorwsP25DPBBTpr9</a>
+            <b>Feedback Form</b>:{" "}
+            <a href="https://forms.gle/EzorwsP25DPBBTpr9">
+              https://forms.gle/EzorwsP25DPBBTpr9
+            </a>
           </div>
         </Context>
       </Content>
