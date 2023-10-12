@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Announcement from "../components/Announcement";
 import styled from "styled-components";
@@ -213,37 +212,6 @@ export const About = () => {
           <div>
             <b>NOTE:</b> In case of any refunds initiated by users, the amount
             will be refunded after a standard 5% order value deduction.
-          </div>
-        </Context>
-      </Content>
-      <Content style={{ border: "none" }}>
-        <Head>Privacy Policy</Head>
-        <Context>
-          Your data stored with us is 100% safe as well as secured. We guarantee
-          that your data or details, whether it be related to logging in or
-          payment, won't be leaked under any circumstances. They are completely
-          confidential. Even anyone at Cakeलाया ?, can't look out for any
-          details. For us, the safety and security of the user are of utmost
-          priority. At any point, if the user feels, that they want to remove
-          their data from our database, they can mail us at our official email
-          or contact us at the numbers mentioned below. We take strict actions
-          against any security or safety breaches at our organisation. We
-          believe that customers are next to god, and believe in providing them
-          with the safest and most hassle-free experience. Your feedback will
-          help us improve our services. Feel free to fill out the google form
-          attached below, to give your feedback about our services. We respect
-          your privacy and anonymity, and thus while filling out the form you
-          won't be asked to enter your name/phone number/email ID or any
-          personal details. For any queries, feel free to write to us at our
-          official mail. Usually, we reply to emails within 48 hours. Sometimes,
-          it may take more than that in case of high demand.
-          <br />
-          <br />
-          <div>
-            <b>Feedback Form</b>:{" "}
-            <a href="https://forms.gle/EzorwsP25DPBBTpr9">
-              https://forms.gle/EzorwsP25DPBBTpr9
-            </a>
           </div>
         </Context>
       </Content>

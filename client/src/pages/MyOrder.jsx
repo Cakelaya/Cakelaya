@@ -6,7 +6,6 @@ import Navbar from "../components/Navbar";
 import Announcement from "../components/Announcement";
 import Header from "../components/Header";
 
-
 const Container = styled.div`
   margin: 10px;
   padding: 0px;
@@ -48,7 +47,17 @@ const Detail = styled.div`
   margin-top: 5px;
 
   blink {
-    background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);   -webkit-background-clip: text;
+    background-image: linear-gradient(
+      to left,
+      violet,
+      indigo,
+      blue,
+      green,
+      yellow,
+      orange,
+      red
+    );
+    -webkit-background-clip: text;
     color: transparent;
     font-weight: 900;
     animation: 2s linear infinite condemned_blink_effect;
@@ -142,20 +151,38 @@ const Home = () => {
           <div>
             {order.map((item, i) => (
               <Card key={i}>
-
                 <Detail>
                   <b>Order Status</b>:
-                  {item.headApp == "amount" &&
-                    <blink> AWAITING PAYMENT CONFIRMATION FROM THE BANK! ORDER NOT CONFIRMED YET!</blink>
-                  }
-                  {item.headApp == "pending" && item.delivered !== "approve" && (
-                    <blink> PAYMENT SUCCESSFUL! ORDER CONFIRMED! ORDER YET TO BE ACCEPTED BY THE RESTAURANT!</blink>
+                  {item.headApp == "amount" && (
+                    <blink>
+                      {" "}
+                      AWAITING PAYMENT CONFIRMATION FROM THE BANK! ORDER NOT
+                      CONFIRMED YET!
+                    </blink>
                   )}
+                  {item.headApp == "pending" &&
+                    item.delivered !== "approve" && (
+                      <blink>
+                        {" "}
+                        PAYMENT SUCCESSFUL! ORDER CONFIRMED! ORDER YET TO BE
+                        ACCEPTED BY THE RESTAURANT!
+                      </blink>
+                    )}
                   {item.headApp == "approve" && item.delivered == "pending" && (
-                    <blink> ORDER ACCEPTED BY THE RESTAURANT! YOUR ORDER IS BEING PREPARED!</blink>
+                    <blink>
+                      {" "}
+                      ORDER ACCEPTED BY THE RESTAURANT! YOUR ORDER IS BEING
+                      PREPARED!
+                    </blink>
                   )}
                   {item.delivered == "approve" && <blink> DELIVERED</blink>}
-                  {item.headApp == "reject" && <blink> ORDER REQUEST REJECTED! AMOUNT IF DEDUCTED, WILL BE REFUNDED!</blink>}
+                  {item.headApp == "reject" && (
+                    <blink>
+                      {" "}
+                      ORDER REQUEST REJECTED! AMOUNT IF DEDUCTED, WILL BE
+                      REFUNDED!
+                    </blink>
+                  )}
                 </Detail>
                 <br></br>
                 <Detail>
@@ -190,8 +217,21 @@ const Home = () => {
                 </Detail>
                 <br></br>
                 <Detail>
-                  <span>(For support, mail us at: <Link href="mailto:support@cakelaya.com" ><b>support@cakelaya.com</b></Link>.)</span>
+                  <span>
+                    (For support, mail us at:{" "}
+                    <Link href="mailto:support@cakelaya.com">
+                      <b>support@cakelaya.com</b>
+                    </Link>
+                    .)
+                  </span>
                 </Detail>
+                <br></br>
+                <div>
+                  <b>Feedback Form</b>:{" "}
+                  <a href="https://forms.gle/EzorwsP25DPBBTpr9">
+                    https://forms.gle/EzorwsP25DPBBTpr9
+                  </a>
+                </div>
                 <button
                   id={"bnt2-" + i}
                   onClick={() => handleClick(i)}
