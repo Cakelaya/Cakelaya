@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import styled from "styled-components";
+import Announcement from "../components/Announcement";
 
 const Content = styled.div`
   /* border-top: 2px solid lightgray; */
