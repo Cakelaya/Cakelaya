@@ -105,18 +105,18 @@ export const About = () => {
         <Context>
           We are a bunch of students, currently studying at Kamla Nehru
           Institute of Technology, Sultanpur. One of the problems we observe
-          students encounters during a birthday party or some other occasion was
-          about getting an affordable and delicious cake. Students had to travel
-          for about 5-6 km to just get a cake. Few players had a monopoly. They
-          gave students cake at a very expensive rate. As they were very well
-          aware of the fact, that student has come 5-6 km far, he/she will
-          surely purchase it and try to get back to the hostel as soon as
-          possible. To avoid students experiencing such an unlikely scenario, we
-          thought of providing a solution for the same problem. Cakeलाया ? is a
-          start-up based on delivering cakes and other savouries to your room at
-          your convenience. All you need is just to take a chill pill, enjoy the
+          students encounter during a birthday party or some other occasion is
+          getting an affordable and delicious cake. Students had to travel for
+          about 5-6 km to just get a cake. Few players had a monopoly. They gave
+          students cake at a very expensive rate. As they were very well aware
+          of the fact, that the student has come 5-6 km far, he/she will surely
+          purchase it and try to get back to the hostel as soon as possible. To
+          avoid students experiencing such an unlikely scenario, we thought of
+          providing a solution for the same problem. Cakeलाया ? is a start-up
+          based on delivering cakes and other savouries to your room at your
+          convenience. All you need is just to take a chill pill, enjoy the
           occasion with your closed ones and let us take care of all your cake
-          and zingy needs!
+          and zingy needs!
         </Context>
       </Content>
       <Content style={{ border: "none" }}>
@@ -134,12 +134,12 @@ export const About = () => {
           bakers/players/vendors will be contacted to deliver your orders to you
           once you place an order. In this way, even the small vendors won't be
           affected and a healthy marketplace environment will be developed. We
-          want the customer and shopkeeper both get benefitted from our
-          services. After the lockdown, where several businesses have suffered
-          from heavy losses, digitalisation and technology are the way to help
-          them. Pricing is set in such a way that even the shopkeeper remains
-          profited as well as students get the best and cheapest cake possible
-          in the city. We prefer quality over anything. Your health is of utmost
+          want the customer and shopkeeper both get benefit from our services.
+          After the lockdown, where several businesses have suffered from heavy
+          losses, digitalisation and technology are the way to help them.
+          Pricing is set in such a way that even the shopkeeper remains profited
+          as well and students get the best and cheapest cake possible in the
+          city. We prefer quality over anything. Your health is of utmost
           priority to us and thus all the cakes delivered are freshly baked and
           prepared within 15 minutes thereafter the order is placed. Cake forms
           an important and integral part of any occasion and adds flavours to
@@ -201,7 +201,7 @@ export const About = () => {
           Currently, the option to cancel your order is not available on our
           website, so we request everyone to place the order with utmost care!
           In case, if you want to update your delivery address or change your
-          cake flavour, that can be done by contacting the phone numbers
+          cake flavour, that can be done by contacting the official email ID
           mentioned below. For refunds, for requests with a genuine reason, your
           refund is processed immediately after verification, and the amount is
           refunded back to your original payment method within 1-2 business

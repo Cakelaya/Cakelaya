@@ -336,6 +336,7 @@ export default function Header() {
               </a>
               <StyledDropdown className="dropdown company">
                 <ul className="dropdown-menu">
+                {user && <MenuItem href="/profile">My Profile</MenuItem>}
                   <MenuItem
                     onClick={() => {
                       history.push({
@@ -370,6 +371,7 @@ export default function Header() {
                       Admin
                     </MenuItem>
                   )}
+                  
                   {user && <MenuItem onClick={handleClick}>Sign Out</MenuItem>}
                   {!user && <MenuItem href="/login">Sign In</MenuItem>}
                 </ul>

@@ -20,6 +20,7 @@ import {
 import Success from "./pages/Success";
 import { useSelector } from "react-redux";
 import Privacy from "./pages/Privacy";
+import Profile from "./pages/Profile";
 
 const App = () => {
   const user = useSelector((state) => state.user.currentUser);
@@ -68,6 +69,9 @@ const App = () => {
         </Route>
         <Route path="/privacy">
           <Privacy />
+        </Route>
+        <Route path="/profile">
+          <Profile />
         </Route>
       </Switch>
     </Router>
